@@ -1,0 +1,35 @@
+    
+input[type='radio'] {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border-radius: 7px;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+input[type='radio']:after {
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        position: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }

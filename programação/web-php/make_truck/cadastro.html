@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro Make Truck</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <meta charset="utf-8">
+    </head>
+    <body id="corpo">
+        <form action="cadformulario.php" name="formulario" method="post">
+            <fieldset id="cadastro">
+                <legend id="titulo">Tela de Cadastro</legend>
+<!--------------------------------------------------------DADOS PESSOAIS--------------------------------------------------->
+                <fieldset id="fio1"><legend id="fiotitulo1">Dados Pessoais</legend></fieldset>
+                <div class="nome">
+                    <div class="box">
+                        <label> Nome </label><br>
+                        <input id="caixa" name="Nome" type="text" size="40" maxlength="20" placeholder="Ex:Alcina" autofocus required pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})"><br>
+                    </div>
+                    <div class="box" style="margin-left: 10px;">
+                        <label> Sobrenome </label><br>
+                        <input id="caixa" name="Sobrenome" type="text" size="40" maxlength="40" required placeholder="Ex:Dantas Feijão" ><br>
+                    </div>
+                </div><div><br>
+                <label> Data de Nascimento </label><br>
+                <input id="caixa" name="Nasc" type="date" required><br><br>
+                <label> Sexo : </label>
+                <input type="radio" name="Sexo" class="masc" value="M" onclick="mudarMasculino()"> Masculino  
+                <input type="radio" name="Sexo" class="femi" value="F" onclick="mudarFeminino()"> Feminino 
+                </div><br>
+                
+                <label> E-mail </label><br>
+                <input id="caixa" name="Email" type="text" size="30" maxlength="55" placeholder="Ex:alcina2017@gmail.com"  required><br><br>
+                <label> Telefone </label><br>
+                <input id="caixa" name="Telefone" type="text" size="20" maxlength="14" placeholder="Ex:(00)4242-4343" pattern="\([0-9]{2}\)([0-9]{4,6})-([0-9]{3,4})$" required><br><br>
+                
+                
+<!------------------------------------------------------------ENDEREÇO--------------------------------------------------------->
+                <fieldset id="fio2"><legend id="fiotitulo2">Endereço</legend></fieldset>
+                <label> CEP </label><br>
+                <input id="caixa" name="Cep" type="text" size="12" maxlength="12" placeholder="00000-000" pattern="([0-9]{8})" required><br><br>
+                <div class="endereco">
+                    <div class="box">
+                        <label> Logradouro(Rua,avenida,etc.) </label><br>
+                        <input id="caixa" name="Rua" type="text" size="30" maxlength="30" required placeholder="Ex: Rua Capivari" pattern="[a-z\s]+$"><br>
+                    </div>
+                    <div class="box" style="width: 150px; margin-left: 10px;">
+                        <label> Número </label><br>
+                        <input id="caixa" name="Numero" type="text" size="5" maxlength="5" required placeholder="Ex:999"><br>
+                    </div>
+                    <div class="box">
+                        <label> Bairro </label><br>
+                        <input id="caixa" name="Bairro" type="text" size="15" maxlength="15" required placeholder="Ex: Mauá"><br>
+                    </div><br><br>
+                    <div class="box">
+                        <label> Cidade </label><br>
+                        <input id="caixa" name="Cidade" type="text" size="30" maxlength="30" required placeholder="Ex: São Caetano do Sul"><br>
+                    </div>
+                    <div class="box" style="margin-left: 10px;">
+                        <label> Estado </label><br>
+                        <input id="caixa" name="Estado" type="text" size="2" maxlength="2" required placeholder="Ex:SP"><br>
+                    </div><br><br> 
+                    <div class="box" style="width:700px;">
+                        <label> Preferência do serviço &nbsp;&nbsp;</label>
+                        <input id="check" name="Servico" type="radio" value="Eventos">Eventos
+                        <input id="check" name="Servico" type="radio" value="Presencial">Presencial
+                    </div>
+                </div><br><br>
+<!------------------------------------------------------------APARÊNCIA MASCULINA-------------------------------------------------------->
+                <div id="aparenciamasc">
+                    <fieldset id="fio3"><legend id="fiotitulo3">Aparência</legend></fieldset>
+                    <div id="conteiner">
+
+                        <div class="box">
+                            <label> Cor do Cabelo </label><br><br>
+                            <div id="d1cc" onclick="d1CC()"><input type="radio" id="aparenciaradio" name="Cor" class="preto" value="Preto"><p>Preto</p></div>
+                            <div id="d2cc" onclick="d2CC()"><input type="radio" id="aparenciaradio" name="Cor" class="castanho" value="Castanho"><p>Castanho</p></div>
+                            <div id="d3cc" onclick="d3CC()"><input type="radio" id="aparenciaradio" name="Cor" class="ruivo" value="Ruivo"><p>Ruivo</p></div>
+                            <div id="d4cc" onclick="d4CC()"><input type="radio" id="aparenciaradio" name="Cor" class="loiro" value="Loiro"><p>Loiro</p></div>
+                            <div id="d5cc" onclick="d5CC()"><input type="radio" id="aparenciaradio" name="Cor" class="branco" value="Branco"><p>Branco</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Tipo de Cabelo </label><br><br>
+                            <div id="d1tpc" onclick="d1TPC()"><input type="radio" id="aparenciaradio" name="Tipo" class="cacheado" value="Cache"><p>Crespo</p></div>
+                            <div id="d2tpc" onclick="d2TPC()"><input type="radio" id="aparenciaradio" name="Tipo" class="ondulado" value="Ondu"><p>Ondulado</p></div>
+                            <div id="d3tpc" onclick="d3TPC()"><input type="radio" id="aparenciaradio" name="Tipo" class="liso"     value="Liso"><p>Liso</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Cor da Pele </label><br><br>
+                            <div id="d1cp" onclick="d1CP()"><input type="radio" id="aparenciaradio" name="Pele" class="branca" value="Branca"><p>Branca</p></div>
+                            <div id="d2cp" onclick="d2CP()"><input type="radio" id="aparenciaradio" name="Pele" class="amarela" value="Amarela"><p>Amarela</p></div>
+                            <div id="d3cp" onclick="d3CP()"><input type="radio" id="aparenciaradio" name="Pele" class=parda value="Parda"><p>Parda</p></div>
+                            <div id="d4cp" onclick="d4CP()"><input type="radio" id="aparenciaradio" name="Pele" class="negra" value="Negra"><p>Negra</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Tamanho de Corte </label><br><br>
+                            <div id="d1tc" onclick="d1TC()"><input type="radio" id="aparenciaradio" name="Tam" class="curtoM" value="Curto"><p>Curto</p></div>  
+                            <div id="d2tc" onclick="d2TC()"><input type="radio" id="aparenciaradio" name="Tam" class="medioM" value="Medio"><p>Medio</p></div>
+                            <div id="d3tc" onclick="d3TC()"><input type="radio" id="aparenciaradio" name="Tam" class="longoM"value="Longo"><p>Grande</p></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!------------------------------------------------------------APARÊNCIA FEMININA------------------------------------------------>
+                <div id="aparenciaf">
+                    <fieldset id="fio3f"><legend id="fiotitulo3f">Aparência</legend></fieldset>
+                    <div id="conteiner">
+
+                        <div class="box">
+                            <label> Cor do Cabelo </label><br><br>
+                            <div id="d1ccf" onclick="d1CCf()" class="div"><input type="radio" id="aparenciaradio" name="Cor" class="pretoF" value="Preto"><p>Preto</p></div>
+                            <div id="d2ccf" onclick="d2CCf()" class="div"><input type="radio" id="aparenciaradio" name="Cor" class="castanhoF" value="Castanho"><p>Castanho</p></div>
+                            <div id="d3ccf" onclick="d3CCf()" class="div"><input type="radio" id="aparenciaradio" name="Cor" class="ruivoF" value="Ruivo"><p>Ruivo</p></div>
+                            <div id="d4ccf" onclick="d4CCf()" class="div"><input type="radio" id="aparenciaradio" name="Cor" class="loiroF" value="Loiro"><p>Loiro</p></div>
+                            <div id="d5ccf" onclick="d5CCf()" class="div"><input type="radio" id="aparenciaradio" name="Cor" class="brancoF" value="Branco"><p>Branco</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Tipo de Cabelo </label><br><br>
+                            <div id="d1tpcf" onclick="d1TPCf()" class="div"><input type="radio" id="aparenciaradio" name="Tipo" class="cacheadoF" value="Cache"><p>Cacheado</p></div>
+                            <div id="d2tpcf" onclick="d2TPCf()" class="div"><input type="radio" id="aparenciaradio" name="Tipo" class="onduladoF" value="Ondu"><p>Ondulado</p></div>
+                            <div id="d3tpcf" onclick="d3TPCf()" class="div"><input type="radio" id="aparenciaradio" name="Tipo" class="lisoF"     value="Liso"><p>Liso</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Cor da Pele </label><br><br>
+                            <div id="d1cpf" onclick="d1CPf()" class="div"><input type="radio" id="aparenciaradio" name="Pele" class="brancaF" value="Branca"><p>Branca</p></div>
+                            <div id="d2cpf" onclick="d2CPf()" class="div"><input type="radio" id="aparenciaradio" name="Pele" class="amarelaF" value="Amarela"><p>Amarela</p></div>
+                            <div id="d3cpf" onclick="d3CPf()" class="div"><input type="radio" id="aparenciaradio" name="Pele" class="pardaF" value="Parda"><p>Parda</p></div>
+                            <div id="d4cpf" onclick="d4CPf()" class="div"><input type="radio" id="aparenciaradio" name="Pele" class="negraF" value="Negra"><p>Negra</p></div>
+                        </div>
+                        <div class="box">
+                            <label> Tamanho de Corte </label><br><br>
+                            <div id="d1tcf" onclick="d1TCf()" class="div"><input type="radio" id="aparenciaradio" name="Tam" class="curtoF" value="Curto"><p>Curto</p></div>  
+                            <div id="d2tcf" onclick="d2TCf()" class="div"><input type="radio" id="aparenciaradio" name="Tam" class="medioF" value="Medio"><p>Medio</p></div>
+                            <div id="d3tcf" onclick="d3TCf()" class="div"><input type="radio" id="aparenciaradio" name="Tam" class="longoF" value="Longo"><p>Longo</p></div>
+                        </div>
+
+                    </div>
+                            </div>
+<!--------------------------------------------------------DADOS DE LOGIN--------------------------------------------------->
+                <fieldset id="fio4"><legend id="fiotitulo4">Dados de Login</legend></fieldset>
+                <center>
+                    <label> Usuário </label><br> 
+                    <input id="caixa" type="text" min="5" size="25" maxlength="20" name="Usuario" required><br><br>
+                    <label> Senha </label> <br>
+                    <input id="caixa" type="password" min="5" size="25" maxlength="25" name="Senha" required><br><br>
+                    <label> Confirmar Senha </label><br> 
+                    <input id="caixa" type="password" min="5" size="25" maxlength="25" name="Confsenha" required><br>
+                </center>
+                    <input id="enviar" type="submit" value="Enviar" onClick=" return validarSenha()">
+                    <a id="botaologin" href="index.html" style="margin-left: 0px;" >Faça Login</a>
+            </fieldset>
+        </form> 
+        
+        
+        <script>
+            function mudarMasculino() {
+                document.getElementById('corpo').style.backgroundImage='url(img/fundoM.jpg)';
+                document.getElementById('cadastro').style.borderColor='#1E88E5';
+                document.getElementById('titulo').style.backgroundColor='#1E88E5';
+                document.getElementById('fiotitulo1').style.color='#1E88E5';
+                document.getElementById('fiotitulo2').style.color='#1E88E5';
+                document.getElementById('fiotitulo3').style.color='#1E88E5';
+                document.getElementById('fiotitulo4').style.color='#1E88E5';
+                document.getElementById('fio1').style.borderColor='#1E88E5';
+                document.getElementById('fio2').style.borderColor='#1E88E5';
+                document.getElementById('fio3').style.borderColor='#1E88E5';
+                document.getElementById('fio4').style.borderColor='#1E88E5';
+                document.getElementById('aparenciaf').style.visibility='collapse';
+                document.getElementById('aparenciamasc').style.visibility='visible';
+                document.getElementById('fio4').style.marginTop='0px';
+                document.getElementById('botaologin').style.backgroundColor='#42A5F5';
+            }
+            function mudarFeminino (){
+                document.getElementById('corpo').style.backgroundImage='url(img/fundoF.jpg)';
+                document.getElementById('cadastro').style.borderColor='#8E24AA';
+                document.getElementById('titulo').style.backgroundColor='#8E24AA';
+                document.getElementById('fiotitulo1').style.color='#EA80FC';
+                document.getElementById('fiotitulo2').style.color='#EA80FC';
+                document.getElementById('fiotitulo3').style.color='#EA80FC';
+                document.getElementById('fiotitulo4').style.color='#EA80FC';
+                document.getElementById('fio1').style.borderColor='#EA80FC';
+                document.getElementById('fio2').style.borderColor='#EA80FC';
+                document.getElementById('fio3').style.borderColor='#EA80FC';
+                document.getElementById('fio4').style.borderColor='#EA80FC';
+                document.getElementById('aparenciamasc').style.visibility='collapse';
+                document.getElementById('aparenciaf').style.visibility='visible';
+                document.getElementById('fiotitulo3f').style.color='#EA80FC';
+                document.getElementById('fio3f').style.borderColor='#EA80FC';
+                document.getElementById('fio4').style.marginTop='10px';
+                document.getElementById('botaologin').style.backgroundColor='#F48FB1';
+                
+            }
+            
+            
+            function d1TC(){
+               document.getElementById('d1tc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2tc').style.background='transparent';
+               document.getElementById('d3tc').style.background='transparent';
+            }
+            function d2TC(){
+               document.getElementById('d1tc').style.background='transparent';
+               document.getElementById('d2tc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3tc').style.background='transparent';
+            }
+            function d3TC(){
+                document.getElementById('d1tc').style.background='transparent';
+               document.getElementById('d2tc').style.background='transparent';
+               document.getElementById('d3tc').style.background='rgba(128,128,128, 0.5)';
+            }
+            function d1TCf(){
+               document.getElementById('d1tcf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2tcf').style.background='transparent';
+               document.getElementById('d3tcf').style.background='transparent';
+            }
+            function d2TCf(){
+               document.getElementById('d1tcf').style.background='transparent';
+               document.getElementById('d2tcf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3tcf').style.background='transparent';
+            }
+            function d3TCf(){
+               document.getElementById('d1tcf').style.background='transparent';
+               document.getElementById('d2tcf').style.background='transparent';
+               document.getElementById('d3tcf').style.background='rgba(128,128,128, 0.5)';
+            }
+            
+            /*---------------------------*/
+                        
+            function d1CC(){
+               document.getElementById('d1cc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2cc').style.background='transparent';
+               document.getElementById('d3cc').style.background='transparent';
+               document.getElementById('d4cc').style.background='transparent';
+               document.getElementById('d5cc').style.background='transparent';
+            }
+            function d2CC(){
+               document.getElementById('d1cc').style.background='transparent';
+               document.getElementById('d2cc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3cc').style.background='transparent';
+               document.getElementById('d4cc').style.background='transparent';
+               document.getElementById('d5cc').style.background='transparent';
+            }
+            function d3CC(){
+               document.getElementById('d1cc').style.background='transparent';
+               document.getElementById('d2cc').style.background='transparent';
+               document.getElementById('d3cc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d4cc').style.background='transparent';
+               document.getElementById('d5cc').style.background='transparent';
+            }
+            function d4CC(){
+               document.getElementById('d1cc').style.background='transparent';
+               document.getElementById('d2cc').style.background='transparent';
+               document.getElementById('d3cc').style.background='transparent';
+               document.getElementById('d4cc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d5cc').style.background='transparent';
+            }
+            function d5CC(){
+               document.getElementById('d1cc').style.background='transparent';
+               document.getElementById('d2cc').style.background='transparent';
+               document.getElementById('d3cc').style.background='transparent';
+               document.getElementById('d4cc').style.background='transparent';
+               document.getElementById('d5cc').style.background='rgba(128,128,128, 0.5)';
+            }
+            
+            
+            function d1CCf(){
+               document.getElementById('d1ccf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2ccf').style.background='transparent';
+               document.getElementById('d3ccf').style.background='transparent';
+                document.getElementById('d4ccf').style.background='transparent';
+               document.getElementById('d5ccf').style.background='transparent';
+            }
+            function d2CCf(){
+               document.getElementById('d1ccf').style.background='transparent';
+               document.getElementById('d2ccf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3ccf').style.background='transparent';
+                 document.getElementById('d4ccf').style.background='transparent';
+                 document.getElementById('d5ccf').style.background='transparent';
+            }
+            function d3CCf(){
+               document.getElementById('d1ccf').style.background='transparent';
+               document.getElementById('d2ccf').style.background='transparent';
+               document.getElementById('d3ccf').style.background='rgba(128,128,128, 0.5)';
+                document.getElementById('d4ccf').style.background='transparent';
+                document.getElementById('d5ccf').style.background='transparent';
+            
+            }
+             function d4CCf(){
+               document.getElementById('d1ccf').style.background='transparent';
+               document.getElementById('d2ccf').style.background='transparent';
+               document.getElementById('d3ccf').style.background='transparent';
+               document.getElementById('d4ccf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d5ccf').style.background='transparent';
+            }
+            function d5CCf(){
+               document.getElementById('d1ccf').style.background='transparent';
+               document.getElementById('d2ccf').style.background='transparent';
+               document.getElementById('d3ccf').style.background='transparent';
+               document.getElementById('d4ccf').style.background='transparent';
+               document.getElementById('d5ccf').style.background='rgba(128,128,128, 0.5)';
+            }
+                        /*---------------------------*/
+                        
+            function d1CP(){
+               document.getElementById('d1cp').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2cp').style.background='transparent';
+               document.getElementById('d3cp').style.background='transparent';
+               document.getElementById('d4cp').style.background='transparent';
+               document.getElementById('d5cp').style.background='transparent';
+            }
+            function d2CP(){
+               document.getElementById('d1cp').style.background='transparent';
+               document.getElementById('d2cp').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3cp').style.background='transparent';
+               document.getElementById('d4cp').style.background='transparent';
+               document.getElementById('d5cp').style.background='transparent';
+            }
+            function d3CP(){
+               document.getElementById('d1cp').style.background='transparent';
+               document.getElementById('d2cp').style.background='transparent';
+               document.getElementById('d3cp').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d4cp').style.background='transparent';
+               document.getElementById('d5cp').style.background='transparent';
+            }
+            function d4CP(){
+               document.getElementById('d1cp').style.background='transparent';
+               document.getElementById('d2cp').style.background='transparent';
+               document.getElementById('d3cp').style.background='transparent';
+               document.getElementById('d4cp').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d5cp').style.background='transparent';
+            }         
+            
+            function d1CPf(){
+               document.getElementById('d1cpf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2cpf').style.background='transparent';
+               document.getElementById('d3ccf').style.background='transparent';
+            }
+            function d2CPf(){
+               document.getElementById('d1cpf').style.background='transparent';
+               document.getElementById('d2cpf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3cpf').style.background='transparent';
+            }
+            function d3CPf(){
+               document.getElementById('d1cpf').style.background='transparent';
+               document.getElementById('d2cpf').style.background='transparent';
+               document.getElementById('d3cpf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d4cpf').style.background='transparent';
+            
+            }
+             function d4CPf(){
+               document.getElementById('d1cpf').style.background='transparent';
+               document.getElementById('d2cpf').style.background='transparent';
+               document.getElementById('d3cpf').style.background='transparent';
+               document.getElementById('d4cpf').style.background='rgba(128,128,128, 0.5)';
+ 
+            }
+                        /*---------------------------*/
+                        
+            function d1TPC(){
+               document.getElementById('d1tpc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2tpc').style.background='transparent';
+               document.getElementById('d3tpc').style.background='transparent';
+
+            }
+            function d2TPC(){
+               document.getElementById('d1tpc').style.background='transparent';
+               document.getElementById('d2tpc').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3tpc').style.background='transparent';
+
+            }
+            function d3TPC(){
+               document.getElementById('d1tpc').style.background='transparent';
+               document.getElementById('d2tpc').style.background='transparent';
+               document.getElementById('d3tpc').style.background='rgba(128,128,128, 0.5)';
+
+            }
+
+            function d1TPCf(){
+               document.getElementById('d1tpcf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d2tpcf').style.background='transparent';
+               document.getElementById('d3tpc').style.background='transparent';
+            }
+            function d2TPCf(){
+               document.getElementById('d1tpcf').style.background='transparent';
+               document.getElementById('d2tpcf').style.background='rgba(128,128,128, 0.5)';
+               document.getElementById('d3tpcf').style.background='transparent';
+            }
+            function d3TPCf(){
+               document.getElementById('d1tpcf').style.background='transparent';
+               document.getElementById('d2tpcf').style.background='transparent';
+               document.getElementById('d3tpcf').style.background='rgba(128,128,128, 0.5)';
+            
+            }
+function validarSenha(){
+	        senha = document.formulario.Senha.value;
+	       confsenha = document.formulario.Confsenha.value;
+ 
+	if (senha != confsenha)
+		alert("SENHAS DIFERENTES");
+        document.formulario.Senha.value = "";
+        document.formulario.Confsenha.value = "";
+        document.formulario.Senha.focus();
+    return false;
+        
+
+}
+
+
+
+        </script>
+    </body>
+</html>

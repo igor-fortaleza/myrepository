@@ -1,0 +1,16 @@
+import javax.swing.*;
+  public class Extenso999 {
+    public static void main (String[] args) {
+     
+      String n = JOptionPane.showInputDialog(null,"Digite um número entre 0 e 999: ");
+      int n1 = Integer.parseInt(n);
+      String unidades[] = {"","um","dois","tres","quatro","cinco","seis","sete","oito","nove",
+      "dez","onze","doze","treze","quatorze","quinze","dezesseis","dezoito","dezenove"};
+      String dezenas[] = {"","","vinte","trinta","quarenta","cinquenta","sessenta","setenta","oitenta","noventa"};
+      String centenas[] = {"","cento","duzentos","trezentos","quatrocentos","quinhentos","seiscentos","setecentos",
+      "oitocentos","novecentos"};
+      
+     
+    JOptionPane.showMessageDialog(null,"O número digitado contém " + cont + " algarismos." );
+    }
+}

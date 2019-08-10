@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Presentes</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <meta charset="utf-8">
+    </head>
+    <body id="corpo">
+        <form action="cadcombo.php" name="formulario" method="post">
+            <fieldset id="cadastro">
+                <legend id="titulo">Cadastrar Produto</legend>
+<!---------------------------------------------------------DADOS DE LOGIN----------------------------------------------------->
+                <fieldset id="fio4"><legend id="fiotitulo4">Dados do Produto</legend></fieldset>
+                <div id="presente"><center>
+                    <label> Nome do Combo </label> <br>
+                    <input id="caixa" type="text" size="25" maxlength="25" name="nome" required><br><br>
+                    <label> Valor </label> <br>
+                    <input id="caixa" type="text" size="25" maxlength="25" name="valor" required><br><br>
+                    <label> Descrição </label> <br>
+                    <input id="caixa" type="text" size="60" maxlength="100" name="descricao" required><br><br>
+                    </center></div>
+                    <input id="enviar" type="submit" value="gravar" onClick=" return validarSenha()">
+                    <a id="botaologin" href="index.html" style="margin-left: 0px;" >Voltar</a>
+                    <a id="botaologin" href="index.html" style="margin-left: 0px;" >Faça Login</a>
+            </fieldset>
+        </form> 
+    </body>
+</html>

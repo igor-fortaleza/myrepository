@@ -1,0 +1,17 @@
+import javax.swing.*;
+public class AlgarismoPossui{
+  public static void main(String args[]){
+    
+    int cont=1;
+    
+    String numero = JOptionPane.showInputDialog("Digite um numero");
+    int n = Integer.parseInt(numero);
+    
+    
+    while (n>=10){
+      n = n/10;
+      cont ++;
+    }
+System.out.println("Esse numero possui "+cont+" algarismo");
+  }
+}

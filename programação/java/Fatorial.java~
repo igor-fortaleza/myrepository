@@ -1,0 +1,11 @@
+import javax.swing.*;
+public class Fatorial{
+  public static void main(String[] args){
+  int dados[] = {5,4,7,9,6,8};
+  for (int x =1; x<dados.lenght;x++)}
+   int fat = 1;
+   for (int cont = 1; cont <=dados[x];cont++){
+     fat * = cont;
+   }
+   System.out.println("Fatorial é + fat");
+}                

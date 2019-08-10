@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+body{  
+    background-image: url(../imagens/fundo.jpeg);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+html{
+    overflow-y: hidden;
+}
+[class*="col-"]{
+    float:left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%}
+.col-4 {width: 33.33%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-image: url(fundo_pag.jpeg);
+    background-attachment: fixed;
+    background-size: 118%;
+}
+.header {
+    background-color: hsla(280,70%,60%,0.7);
+    background-size: 100%;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+.header img{
+    width: 150px;
+    height: 150px;
+}
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+.menu li{
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #0D47A1;
+    color: #ffffff;
+    box-shadow: 0 1px 3 px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+@media only screen and (max-width: 900px) {
+    body{
+        background-image: none;
+    }
+    html{
+    overflow-y: visible;
+}
+    div#form_inputs{
+    width: 30%;
+    display: inline-table;
+    text-align: left;
+}
+    div#form_inputs input{
+    width: 100%;
+    text-align: left;
+}
+    fieldset#field_login #form_inputs input[type='submit'], fieldset#field_cadastro #form_inputs input[type='submit']{
+        text-align: center;
+    }
+}
+.aside{
+    background-color: #D50000;
+    padding: 15px;
+    color: #ffffff;
+    text-align: justify;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+}
+.footer{
+    border-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"]{
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* Para tablets: */
+.col-m-1 {width: 8.33%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%}
+.col-m-4 {width: 33.33%}
+.col-m-5 {width: 41.66%}
+.col-m-6 {width: 50%}
+.col-m-7 {width: 58.33%}
+.col-m-8 {width: 66.66%}
+.col-m-9 {width: 75%}
+.col-m-10 {width: 83.33%}
+.col-m-11 {width: 91.66%}
+.col-m-12 {width: 100%}
+}
+@media only screen and (min-width: 768px){
+    /* Para desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%}
+.col-4 {width: 33.33%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    text-align: justify;
+}
+.meio{
+    background-color: hsla(0,100%,100%,0.8);
+    margin-top: 15px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+form#form_login{
+    height: 0px;
+    visibility: collapse;
+    transition: ease-in 0.3s;
+}
+form#form_cadastro{
+    visibility: collapse;
+    height: 0;
+    transition: ease-in 0.3s;
+}
+fieldset#field_login legend{
+    font-size: 130%;
+    background-color: hsla(280,70%,60%,1);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+fieldset#field_cadastro legend{
+    font-size: 130%;
+    background-color: hsla(115,50%,55%,1);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+fieldset#field_login{
+    background-color: hsla(115,50%,55%,0.8);
+    border: dashed 2px;
+    border-radius: 3px;
+    border-color: hsla(280,70%,60%,1);
+    color: white;
+}
+fieldset#field_login input[type='text'],fieldset#field_login input[type='password']{
+    color: white;
+    width: 40%;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-bottom-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+    margin-bottom: 20px;
+}
+fieldset#field_login #form_inputs input[type='submit'], fieldset#field_cadastro #form_inputs input[type='submit']{
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+}
+fieldset#field_login #form_inputs input[type='submit']:hover{
+    background-color: #00E676;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+fieldset#field_cadastro #form_inputs input[type='submit']:hover{
+    background-color: #7C4DFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+fieldset#field_cadastro input[type='text'],fieldset#field_cadastro input[type='password']{
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-bottom-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+    margin-bottom: 20px;
+}
+fieldset#field_login input[type='text']:focus,fieldset#field_login input[type='password']:focus{
+    outline: 0 none;
+    border-color: hsla(280,70%,60%,1);
+}
+fieldset#field_cadastro input[type='text']:focus,fieldset#field_cadastro input[type='password']:focus{
+    outline: 0 none;
+    border-color: hsla(115,50%,55%,1);
+}
+fieldset#field_cadastro{
+    background-color: hsla(280,70%,60%,0.8);
+    border: dashed 2px;
+    border-radius: 3px;
+    border-color: hsla(115,50%,55%,1);
+    color: white;
+}
+p#texto_login, p#texto_cadastro{
+    background-color: hsla(0,100%,100%,0.8);
+    padding: 20px;
+    height: auto;
+    border: solid 1px #90A4AE;
+}
+button.botao_login{
+    color: white;
+    background-color: #43A047;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    font-size: 110%;
+    
+}
+button.botao_cadastro{
+    color: white;
+    background-color: #5E35B1;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    font-size: 110%;
+}
+.botao_login:hover, .botao_cadastro:hover{
+    background-color: white;
+    color: black;
+}
+.centro{
+    text-align: center;
+}
+div#form_inputs{
+    width: 40%;
+    display: inline-table;
+    text-align: left;
+}
+div#form_inputs input[type='text'],div#form_inputs input[type='password']{
+    width: 100%;
+    text-align: left;
+}

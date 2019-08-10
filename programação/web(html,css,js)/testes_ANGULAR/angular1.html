@@ -1,0 +1,59 @@
+<html ng-app>
+    <head>
+        <title>AngularJS - Tableless</title>
+        <script src="https://code.angularjs.org/1.0.1/angular-1.0.1.min.js">
+</script>
+    </head>
+    <body>
+        <input type="text" ng-model="nome">
+        <p>Olá {{ nome }}</p>
+ 
+        <P>------------------------------------------------</P>
+        <input type="number" ng-model="n1">
+        <h3>+</h3>
+        <input type="number" ng-model="n2">
+        <p>as somas dos numeros é: {{ n1 + n2 }}</p>
+        
+           <P>------------------------------------------------</P>
+        
+        <script>
+function ListaComprasController($scope) {
+    $scope.itens = [
+        {produto: 'Leite', quantidade: 2, comprado: false},
+        {produto: 'Cerveja', quantidade: 12, comprado: false}
+    ];
+
+    $scope.adicionaItem = function () {
+        $scope.itens.push({produto: $scope.item.produto,
+                           quantidade: $scope.item.quantidade,
+                           comprado: false});
+        $scope.item.produto = $scope.item.quantidade = '';
+    };
+}
+        </script>
+        
+
+        <div ng-controller="ListaComprasController">
+<form class="form-inline" name="formItem">
+  <input type="text" ng-model="item.produto">
+  <input type="number" ng-model="item.quantidade">
+  <button ng-click="adicionaItem()">adicionar ítem</button>
+</form>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in itens">
+          <td><strong>{{ item.produto }}</strong></td>
+          <td>{{ item.quantidade }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+        
+    </body>
+</html>

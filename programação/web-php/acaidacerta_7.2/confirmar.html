@@ -1,0 +1,116 @@
+<html lang="pt-br" >
+<head>
+    <title> Açaída Certa</title>
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilo_paginas.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB7s0zDs4RMWrpqWjAmr7OD-BQbq8LubZk&amp;sensor=false"></script>
+    <script>
+        function preencher() {
+          if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(posicao) {
+              var url = "http://nominatim.openstreetmap.org/reverse?lat="+posicao.coords.latitude+"&lon="+posicao.coords.longitude+"&format=json&json_callback=preencherDados";
+
+              var script = document.createElement('script');
+              script.src = url;
+              document.body.appendChild(script);
+            });
+          } else {
+            alert('seu navegador não suporta geolocation');
+          }
+        }
+function abreloading(){
+            var rua = document.form_endereco.rua.value;
+            if (rua == ''){
+                document.getElementById('carregando').style.display="inherit";
+            }
+            
+        }
+function preencherDados(dados) {
+  document.getElementById('carregando').style.display="none";
+  document.querySelector('[name=rua]').value = dados.address.road;
+  document.querySelector('[name=numero]').value = dados.address.house_number;
+  document.querySelector('[name=cidade]').value = dados.address.city;
+  document.querySelector('[name=bairro]').value = '';
+  document.querySelector('[name=cep]').value = dados.address.postcode;  
+}
+    </script>
+    <script>
+
+        function imagemverde(){
+            document.getElementById('pontolocaliza').src="imagens/localizacao.png";
+        }
+        function imagemroxa(){
+            document.getElementById('pontolocaliza').src="imagens/localizacao1.png";
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="row">
+        <nav class="col-12 col-m-12 menu">
+                <ul class="col-12 col-m-12">
+                    <a href="index.html"><li class="col-1 col-m-1 sem_hover" style="padding:4px 10px 5px 10px;margin:0;"> <img class="img_index" src='imagens/logo.png'></li></a>
+                    <li class="invisivel col-1 col-m-1"></li>
+                    <li class="invisivel col-1 col-m-1"></li>
+                    <a href="combos.php"><li class="col-3 col-m-3"> Combos </li></a>
+                    <a href="confirmar.php"><li class="col-3 col-m-3"> Confirmar Pedido</li></a>
+                    <a href="acompanhe.php"><li class="col-3 col-m-3"> Acompanhar Pedido </li></a>
+                </ul>
+        </nav>
+        <div class="col-2 col-m-2" style="padding: 1px;"></div>
+        <div class="col-8 col-m-8" style="padding-top: 100px;">
+            <form name="form_endereco">
+
+                  <fieldset class="endereco">
+                    <legend>Endereço de Entrega</legend>
+
+                    <button class="small" onclick="preencher();abreloading();" onmousemove="imagemroxa();" onmouseout="imagemverde();" type="button"><img id="pontolocaliza" src="imagens/localizacao.png"> Preencher com minha localização atual</button>
+                      <br><br>
+                    <div class="localizacao">
+                        <label>Rua<br>
+                          <input type="text" name="rua" required>
+                            <br>
+                        </label>
+
+                        <label>Número<br>
+                          <input type="text" name="numero" required>
+                            <br>
+                        </label>
+                    </div>
+                    <div class="localizacao">
+                        <label>Cidade<br>
+                          <input type="text" name="cidade" required>
+                            <br>
+                        </label>
+
+                        <label>Bairro<br>
+                          <input type="text" name="bairro" required>
+                            <br>
+                        </label>
+                    </div>
+                    <div class="localizacao">
+                        <label>CEP<br>  
+                          <input type="text" name="cep" required>
+                            <br>
+                        </label>
+                    </div>
+                  </fieldset>
+
+
+                <button class="success">Confirmar</button>
+  
+            </form>
+        </div>
+        <div class="col-2 col-m-2" style="padding: 1px;"></div>
+        <div id="carregando">
+            <img src="imagens/loading.gif">
+        
+        </div>
+    </div>
+</body>

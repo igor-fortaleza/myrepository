@@ -1,0 +1,114 @@
+<html lang="pt-BR">
+<head>
+    <title>Lollapalooza</title>   
+    <meta charset="UTF-8">
+    <link href="index.css" rel="stylesheet"> 
+    <link href="menu.css" rel="stylesheet"> 
+    <link href="radio.css" rel="stylesheet"> 
+    <link href="estilopags.css" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="sortcut icon" href="img/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  
+
+    <div class="index">
+          <div class="containerMonstro">
+            <a href="menu.html" target="iframe">
+                <img class="monsterEsquerda" src="img/monster.png" alt="monstro esquerda">
+            
+            <div class="overlayMonstro">
+                <div class="textoMonstro">H<br>o<br>m<br>e</div>
+            </div>
+            </a>
+        </div>
+        
+        <header>
+            <img class="cabecalho" src="img/lolla8.png" alt="Cabeçalho Lollapalooza">
+        </header>
+        
+        <ul>
+            <li><a href="https://www.facebook.com/LollapaloozaBR/">
+                    <img id="iconeFacebook" src="img/icone_facebook2.png" alt="facebook">
+                </a></li>
+            <li><a href="https://www.youtube.com/user/lollapalooza">
+                    <img id="iconeYoutube" src="img/icone_youtube2.png" alt="youtube">
+                </a></li>
+            <li><a href="https://twitter.com/lollapaloozabr">
+                    <img id="iconeTwitter" src="img/icone_twitter2.png" alt="twitter">
+                </a></li>   
+            <li><a href="https://www.instagram.com/lollapaloozabr/?hl=pt-br">
+                    <img id="iconeInstagram" src="img/icone_insta2.png" alt="instagram">
+                </a></li>
+        </ul>
+       
+
+        <iframe src="menu.html" name="iframe">
+        </iframe>
+        
+        <footer>
+            by JNT_ExpoSoft
+        </footer>
+    </div>
+        
+    <div id="mydiv">
+        <div id="mydivheader">
+            <audio preload="auto" autoplay controls volume="1">
+                <source src="http://www.partyviberadio.com:8040/;listen.pls?sid=1">
+                <!--por que as músicas alternativas não são tocadas automaticamente qnd a rádio não pega??-->
+                <source src="snd/musicas.alternativas.ogg" type="audio/ogg">
+                <source src="snd/musicas.alternativas.mp3" type="audio/mp3">
+                Este navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+        
+        <!--Opções de rádio 8000 (reggae), 8056 (ambient), 8004 (drum and bass), 8032 (breakbeat), 8040 (dubstep), 8016 (rap), 8046 (techno), 8024 (pop), 8020 (rock)-->
+    </div>
+    
+   <script>
+            //Torna o elemento DIV arrastável:
+        dragElement(document.getElementById(("mydiv")));
+
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById(elmnt.id + "header")) {
+            /* caso esteja presente, o header está onde o mouse estava:*/
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+          } else {
+            /* senão, move o DIV de qualquer lugar de dentro da DIV:*/
+            elmnt.onmousedown = dragMouseDown;
+          }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            // pega a posição do cursor do mouse ao iniciar:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // chama uma função sempre que o cursor se move:
+            document.onmousemove = elementDrag;
+          }
+
+          function elementDrag(e) {
+            e = e || window.event;
+            // calcula a nova posiçao do cursor:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // define a nova posição do elemento:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+
+          function closeDragElement() {
+            /* para de mover quando o botão do mouse é solto:*/
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+2018-04-16 21:21:39 3324 [Note] Plugin 'FEDERATED' is disabled.
+2018-04-16 21:21:39 3324 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-04-16 21:21:39 3324 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2018-04-16 21:21:39 3324 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-04-16 21:21:39 3324 [Note] InnoDB: Not using CPU crc32 instructions
+2018-04-16 21:21:39 3324 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2018-04-16 21:21:39 3324 [Note] InnoDB: Completed initialization of buffer pool
+2018-04-16 21:21:39 3324 [Note] InnoDB: Setting log file E:\DENNIS TERENTJVAS\Dennis Terentjvas 3°Módulo\nelson\app_php\mysql\data\ib_logfile101 size to 5 MB
+2018-04-16 21:21:41 3324 [Note] InnoDB: Setting log file E:\DENNIS TERENTJVAS\Dennis Terentjvas 3°Módulo\nelson\app_php\mysql\data\ib_logfile1 size to 5 MB
+2018-04-16 21:21:43 3324 [Note] InnoDB: Renaming log file E:\DENNIS TERENTJVAS\Dennis Terentjvas 3°Módulo\nelson\app_php\mysql\data\ib_logfile101 to E:\DENNIS TERENTJVAS\Dennis Terentjvas 3°Módulo\nelson\app_php\mysql\data\ib_logfile0
+2018-04-16 21:21:43 3324 [Warning] InnoDB: New log files created, LSN=1626134
+2018-04-16 21:21:43 3324 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-04-16 21:21:43 3324 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-04-16 21:21:43 3324 [Note] InnoDB: Waiting for purge to start
+2018-04-16 21:21:43 3324 [Note] InnoDB: 5.6.13 started; log sequence number 1626636
+2018-04-16 21:21:43 3324 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 4eab1d00-41d5-11e8-8ad0-c89cdc483899.
+2018-04-16 21:21:43 3324 [Note] Server hostname (bind-address): '*'; port: 3307
+2018-04-16 21:21:43 3324 [Note] IPv6 is available.
+2018-04-16 21:21:43 3324 [Note]   - '::' resolves to '::';
+2018-04-16 21:21:43 3324 [Note] Server socket created on IP: '::'.
+2018-04-16 21:21:44 3324 [Note] Event Scheduler: Loaded 0 events
+2018-04-16 21:21:44 3324 [Note] E:\DENNIS TERENTJVAS\Dennis Terentjvas 3°Módulo\nelson\app_php/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.13'  socket: ''  port: 3307  MySQL Community Server (GPL)

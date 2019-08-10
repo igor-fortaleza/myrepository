@@ -1,0 +1,9 @@
+Exercicio 1
+
+Descricao: Escreva um programa em C/C++ e receba 3 numeros reais e faça a seguinte operação:
+
+- (n1 + n2)/d
+
+e mostre seu resultado na tela. 
+
+ 

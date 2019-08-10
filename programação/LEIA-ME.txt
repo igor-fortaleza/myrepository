@@ -1,0 +1,28 @@
+------------------------Igor Alves Fortaleza----------------------
+Arquivos para CV 
+Todos arquivos foram desenvolvidas por mim com a vivencias de cursos presenciais, online e projetos pessoais. 
+
+
+Aplicativos:
+C#:
+ - Programas em C# desenvolvidos durante o periodo de técnico de informatica e desenvolvimento pessoais
+ decorrer de cursos onlines. 
+Frameworks: Selenium - Automação de Testes.
+
+C++:
+ - Programas em C# desenvolvidos durante o periodo de técnico de TI.
+ 
+Desing Grafico:
+ - Algumas criações de artes pessoais desenvolvidas pelo software COREL DRAW após o curso do mesmo em 2014.
+ 
+Java:
+ - Aplicações desenvolvidas em java no decorrer do curso técnico.
+
+Python:
+
+
+Web:
+
+
+Web- PHP:
+

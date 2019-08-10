@@ -1,0 +1,172 @@
+<html lang="pt-br">
+<head>
+    <title> Açaída Certa</title>
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript">
+        var vCont = 1;
+        function conta(){
+            vCont = vCont + 1;
+        }
+        var vCont2 = 1;
+        function conta2(){
+            vCont2 = vCont2 + 1;
+        }
+        function aparece(valor){
+                var valores = ['form_login','form_cadastro'];
+                var formulario = valores[valor];
+                if (valor == 0){
+                    document.getElementById(formulario).style.visibility='visible';
+                    document.getElementById(formulario).style.height='175px';
+                    document.getElementById('texto_login').style.height='0px';
+                    document.getElementById('texto_login').style.visibility='collapse';
+                     document.getElementById('submit_login').style.visibility='visible';
+                    if (vCont % 2 == 0 &&  vCont > 0){
+                        document.getElementById(formulario).style.visibility='collapse';
+                        document.getElementById(formulario).style.height='0';
+                        document.getElementById('texto_login').style.height='auto';
+                        document.getElementById('texto_login').style.visibility='visible';
+                        document.getElementById('submit_login').style.visibility='collapse';
+                    }
+                }
+                else{
+                    document.getElementById(formulario).style.visibility='visible';
+                    document.getElementById(formulario).style.height='245px';
+                    document.getElementById('texto_cadastro').style.height='0px';
+                    document.getElementById('texto_cadastro').style.visibility='collapse';
+                    document.getElementById('submit_cadastro').style.visibility='visible';
+
+                    if (vCont2 % 2 == 0 &&  vCont2 > 0){
+                        document.getElementById(formulario).style.visibility='collapse';
+                        document.getElementById(formulario).style.height='0px';
+                        document.getElementById('texto_cadastro').style.height='auto';
+                        document.getElementById('texto_cadastro').style.visibility='visible';
+                        document.getElementById('submit_cadastro').style.visibility='collapse';
+                        
+                    }
+                }
+        }
+                        function botao(){
+                        document.getElementById('form_cadastro').style.visibility='collapse';
+                        document.getElementById('form_cadastro').style.height='0px';
+                        document.getElementById('texto_cadastro').style.height='auto';
+                        document.getElementById('texto_cadastro').style.visibility='visible';
+                        document.getElementById('submit_cadastro').style.visibility='collapse';
+                        
+                    if (vCont%2==0){      
+                        document.getElementById('form_login').style.visibility='visible';
+                        document.getElementById('form_login').style.height='175px';
+                        document.getElementById('texto_login').style.height='0px';
+                        document.getElementById('texto_login').style.visibility='collapse';
+                        document.getElementById('submit_login').style.visibility='visible';
+                        vCont2=1;
+                    }
+
+
+                    }
+                    function botao2(){
+                        document.getElementById('form_login').style.visibility='collapse';
+                        document.getElementById('form_login').style.height='0';
+                        document.getElementById('texto_login').style.height='auto';
+                        document.getElementById('texto_login').style.visibility='visible';
+                        document.getElementById('submit_login').style.visibility='collapse';
+                    if (vCont2%2==0){
+                        document.getElementById('form_cadastro').style.visibility='visible';
+                        document.getElementById('form_cadastro').style.height='245px';
+                        document.getElementById('texto_cadastro').style.height='0px';
+                        document.getElementById('texto_cadastro').style.visibility='collapse';
+                        document.getElementById('submit_cadastro').style.visibility='visible';
+                        vCont=1;
+                    }
+                    }
+      
+        
+        
+        function validarSenha(){
+	        senha = document.formulario_cadastro.senha.value;
+	        confsenha = document.formulario_cadastro.confsenha.value;
+ 
+            if (senha != confsenha){
+                alert("SENHAS DIFERENTES");
+                document.formulario_cadastro.senha.value = "";
+                document.formulario_cadastro.confsenha.value = "";
+                document.formulario_cadastro.senha.focus();
+                return false;
+            }
+
+}
+    </script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="imagens/logo.png">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-1 col-m-1">
+                
+            </div>
+            <div class="col-5 col-m-5 centro">
+                <form action="Php/consultacliente.php" method="post" id="form_login" name="formulario_login">
+                    <fieldset id="field_login">
+                        <legend style="text-align: center;">Login</legend>
+                        <br>
+                        <div id="form_inputs">
+                            <label>Usuário</label><br>
+                            <input type="text" name="usuario" min="5" size="25" maxlength="20" required><br>
+                            <label>Senha</label><br>
+                            <input type="password" name="senha" min="5" size="25" maxlength="25" required><br>
+                            <input type="submit" id="submit_login" value="Entrar" style="float:right;">
+                        </div>
+                    </fieldset>
+                </form>
+                <p id="texto_login">
+                    Está cansado de se locomover para poder saborear um delicioso açai?<br>
+                    Então você está no lugar certo, no Açaida Certa você compra um açai sem sair da sua casa e pode saborea-lo no conforto de sua residência.<br>
+                    Faça login e tenha acesso a nossa variedades de tamanhos e incrementos.<br>
+                </p>
+                <button class="botao_login" onclick="aparece(0);conta();botao()">Login</button>
+            </div>
+            <div class="col-5 col-m-5 centro">
+                <form action="Php/cadformulario.php" method="post" id="form_cadastro" name="formulario_cadastro">
+                    <fieldset id="field_cadastro">
+                        <legend style="text-align: center;">Cadastro</legend>
+                        <br>
+                        <div id="form_inputs">
+                            <label>Nome</label><br>
+                            <input type="text" name="nome" size="40" maxlength="20" placeholder="Ex:Alcina" autofocus required pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})"><br>
+                            <label>Usuário</label><br>
+                            <input type="text" name="usuario" min="5" size="25" maxlength="20" required><br>
+                            <label>Senha</label><br>
+                            <input type="password" name="senha" min="5" size="25" maxlength="25" required><br>
+                            
+                        </div>
+                        <div id="form_inputs">
+                            <label>Sobrenome</label><br>
+                            <input type="text" name="sobrenome" size="40" maxlength="40" required placeholder="Ex:Dantas Feijão"><br>
+                            <label>E-mail</label><br>
+                            <input type="text" name="email" type="text" size="30" maxlength="55" placeholder="Ex:alcina2017@gmail.com"  required><br>
+                            <label>Confirmar Senha</label><br>
+                            <input type="password" name="confsenha" min="5" size="25" maxlength="25" required><br>
+                            <input type="submit" value="Cadastrar" id="submit_cadastro" style="float:right;" onClick=" return validarSenha()">
+                        </div><br>
+                    </fieldset>
+                </form>
+                <p id="texto_cadastro">
+                    Está cansado de se locomover para poder saborear um delicioso açai?<br>
+                    Então você está no lugar certo, no Açaida Certa você compra um açai sem sair da sua casa e pode saborea-lo no conforto de sua residência.<br>
+                    Faça o cadastro e tenha acesso a nossa variedades de tamanhos e incrementos.<br>
+                </p>
+                <button class="botao_cadastro" onclick="aparece(1);conta2();botao2()">Cadastro</button>
+            </div>
+            <div class="col-1 col-m-1">
+                
+            </div>
+        </div>
+
+    </body>
+</html>

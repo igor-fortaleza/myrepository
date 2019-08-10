@@ -1,0 +1,23 @@
+<div id="footer">
+  &copy; 
+  <strong id="foot" onmouseover="showData();" onmouseout = "hideData()">
+    Exquisite Taste 2012
+  </strong>
+  <input type='checkbox' id="remember" onclick='editCookie()' style="visibility:hidden;" />
+</div>
+<script >
+function showData()
+{
+
+
+  document.getElementById("remember").style.visibility="visible";
+
+
+  document.getElementById("foot").innerHTML = getDate() + " " + getTime();
+
+  if(cookieValue())
+  {
+    document.getElementById("remember").checked = true;
+  }
+}
+</script>

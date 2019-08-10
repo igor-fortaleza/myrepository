@@ -1,0 +1,508 @@
+body#corpo{
+	-webkit-transition:all .2s ease;
+	transition: all .2s ease;
+    background-image: url(img/FundoN.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+fieldset#cadastro , #login{
+    width: 700px;
+    padding: 10px 30px 20px 30px;
+    background-color: hsla(0,0%,0%,0.7);
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    border-color: white;
+    border-radius: 5px;
+}
+label {
+  font-weight: bolder;
+    padding: 5px;
+}
+fieldset#cadastro legend#titulo, fieldset#login legend#titulo{
+    background-color: black;
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 170%;
+    text-align: right;
+    border-radius: 25px 10px;
+    padding: 0px 15px;
+}
+fieldset#fio1 ,#fio2, #fio3,#fio3f {
+    margin-bottom: 30px;
+    background-color: hsla(0,100%,100%,0);
+    height: 0px;
+    font-size: 90%;
+    border-top: 1px;
+    border-style: dotted;
+    border-color: grey;
+    border-bottom:none ;
+    border-left: none;
+    border-right: none;
+}
+fieldset#fio4{
+    margin-top: -85px;
+    margin-bottom: 40px;
+    background-color: hsla(0,100%,100%,0);
+    height: 0px;
+    font-size: 90%;
+    border-top: 1px;
+    border-style: dotted;
+    border-color: grey;
+    border-bottom:none ;
+    border-left: none;
+    border-right: none;
+}
+fieldset#fio legend#fiotitulo1, legend#fiotitulo2, legend#fiotitulo3, legend#fiotitulo4{
+    color: darkgray;
+}
+    
+input#check[type='radio'] {
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: #d1d3d1;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+input#check[type='radio']:after,input.masc[type='radio']:after,input.femi[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: #d1d3d1;
+    content:   '';
+    cursor: pointer;
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+input#check[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: black;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+
+input.masc[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: deepskyblue;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+input.femi[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: hotpink;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+
+div.endereco .box{
+    width: 250px;
+    display: inline-block;
+}
+div.nome .box {
+    width: 320px;
+    display: inline-block;
+} 
+div#aparenciamasc{
+    visibility: collapse;
+}
+div#aparenciaf{
+    visibility: collapse;
+}
+div#conteiner .box{
+    width: 170px;
+    display: inline-table;
+    text-align: center;
+    overflow: hidden;
+    font-size: 80%;
+}
+div#conteiner .box label{
+    font-size: 110%;
+}
+input#caixa[type='text'],[type='date'],[type='password']{
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-bottom-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+}
+input#caixa:focus{
+    color: white;
+    outline: 0 none;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-color: deepskyblue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+}
+
+/*----------------------------------------------------RADIO APARENCIA----------------------------------------------------*/
+    
+input#aparenciaradio[type='radio'] {
+        width: 70px;
+        height: 70px;
+        content: '';
+        display: inline-block;
+        visibility: collapse;
+    }
+
+input#aparenciaradio[type='radio']:after {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        background-size: 100%;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+
+    input#aparenciaradio[type='radio']:checked:after {
+        position: center;
+        width: 70px;
+        height: 70px;
+         border-radius: 8px;
+        content: '';
+        background-size: 100%;
+        display: inline-block;
+        visibility: visible;
+    }
+
+
+.curtoF[type='radio']:after {
+         background-image: url(img/tc/1f.png);
+         width: 80px;
+         height: 80px;
+    }
+.curtoF[type='radio']:checked:after {
+         background-image: url(img/tc/1fs.png);
+
+    }
+  .curtoF:hover {
+    background-image: url(img/tc/1fs.png);
+          width: 80px;
+    height: 80px;
+}
+.medioF[type='radio']:after {
+         background-image: url(img/tc/2f.png);
+    width: 80px;
+    height: 80px;
+    }
+.medioF[type='radio']:checked:after {
+         background-image: url(img/tc/2fs.png);
+
+    }
+  .medioF:hover {
+ background-image: url(img/tc/2fs.png);
+}
+.longoF[type='radio']:after {
+         background-image: url(img/tc/3f.png);
+    }
+.longoF[type='radio']:checked:after {
+         background-image: url(img/tc/3fs.png);
+    }
+  .longoF:hover {
+    background-image: url(img/tc/3fs.png);
+}
+
+/*----------------------------Masculino---------------------------------------*/
+.curtoM[type='radio']:after {
+         background-image: url(img/tc/1.png);
+    }
+.curtoM[type='radio']:checked:after {
+         background-image: url(img/tc/1s.png);
+    }
+  .curtoM:hover {
+    background-image: url(img/tc/1s.png);
+}
+.medioM[type='radio']:after {
+         background-image: url(img/tc/2.png);
+    }
+.medioM[type='radio']:checked:after {
+         background-image: url(img/tc/2s.png);
+    }
+  .medioM:hover {
+ background-image: url(img/tc/2s.png);
+}
+.longoM[type='radio']:after {
+         background-image: url(img/tc/3.png);
+    }
+.longoM[type='radio']:checked:after {
+         background-image: url(img/tc/3s.png);
+    }
+  .longoM:hover {
+    background-image: url(img/tc/3s.png);
+}
+/*----------------------------Cor De Pele---------------------------------------*/
+.branca[type='radio']:after {
+         background-image: url(img/cp/branca.png);
+    }
+.amarela[type='radio']:after {
+         background-image: url(img/cp/amarela.png);
+    }
+.parda[type='radio']:after {
+         background-image: url(img/cp/parda.png);
+    }
+.negra[type='radio']:after {
+         background-image: url(img/cp/negra.png);
+    }
+
+.brancaF[type='radio']:after {
+         background-image: url(img/cp/branca.png);
+    }
+.amarelaF[type='radio']:after {
+         background-image: url(img/cp/amarela.png);
+    }
+.pardaF[type='radio']:after {
+         background-image: url(img/cp/parda.png);
+    }
+.negraF[type='radio']:after {
+         background-image: url(img/cp/negra.png);
+    }
+/*-------------------------------------------------------Cor de Cabelo------------------------------------------------*/
+.preto[type='radio']:after {
+         background-image: url(img/cc/preto.png);
+    }
+.castanho[type='radio']:after {
+         background-image: url(img/cc/castanho.png);
+    }
+.ruivo[type='radio']:after {
+         background-image: url(img/cc/ruivo.png);
+    }
+.loiro[type='radio']:after {
+         background-image: url(img/cc/loiro.png);
+    }
+.branco[type='radio']:after {
+         background-image: url(img/cc/branco.png);
+    }
+
+.preto[type='radio']:checked:after {
+        background-image: url(img/cc/pretos.png);
+    }
+.castanho[type='radio']:checked:after {
+         background-image: url(img/cc/castanhos.png);
+    }
+.ruivo[type='radio']:checked:after {
+         background-image: url(img/cc/ruivos.png);
+    }
+.loiro[type='radio']:checked:after {
+         background-image: url(img/cc/loiros.png);
+    }
+.branco[type='radio']:checked:after {
+         background-image: url(img/cc/brancos.png);
+    }
+
+.pretoF[type='radio']:after {
+         background-image: url(img/cc/preto.png);
+    }
+.castanhoF[type='radio']:after {
+         background-image: url(img/cc/castanho.png);
+    }
+.ruivoF[type='radio']:after {
+         background-image: url(img/cc/ruivo.png);
+    }
+.loiroF[type='radio']:after {
+         background-image: url(img/cc/loiro.png);
+    }
+.brancoF[type='radio']:after {
+         background-image: url(img/cc/branco.png);
+    }
+
+.pretoF[type='radio']:checked:after {
+        background-image: url(img/cc/pretos.png);
+    }
+.castanhoF[type='radio']:checked:after {
+         background-image: url(img/cc/castanhos.png);
+    }
+.ruivoF[type='radio']:checked:after {
+         background-image: url(img/cc/ruivos.png);
+    }
+.loiroF[type='radio']:checked:after {
+         background-image: url(img/cc/loiros.png);
+    }
+.brancoF[type='radio']:checked:after {
+         background-image: url(img/cc/brancos.png);
+    
+    }
+
+/*-------------------------------------------------------Tipo de Cabelo------------------------------------------------*/
+.cacheado[type='radio']:after {
+         background-image: url(img/tc/cacheado.png);
+    }
+.ondulado[type='radio']:after {
+         background-image: url(img/tc/ondulado.png);
+    }
+.liso[type='radio']:after {
+         background-image: url(img/tc/liso.png);
+    }
+
+.cacheado[type='radio']:checked:after {
+         background-image: url(img/tc/cacheados.png);
+    }
+.ondulado[type='radio']:checked:after {
+         background-image: url(img/tc/ondulados.png);
+    }
+.liso[type='radio']:checked:after {
+         background-image: url(img/tc/lisos.png);
+    }
+
+.cacheadoF[type='radio']:after {
+         background-image: url(img/tc/cacheado.png);
+    }
+.onduladoF[type='radio']:after {
+         background-image: url(img/tc/ondulado.png);
+    }
+.lisoF[type='radio']:after {
+         background-image: url(img/tc/liso.png);
+    }
+
+.cacheadoF[type='radio']:checked:after {
+         background-image: url(img/tc/cacheados.png);
+    }
+.onduladoF[type='radio']:checked:after {
+         background-image: url(img/tc/ondulados.png);
+    }
+.lisoF[type='radio']:checked:after {
+         background-image: url(img/tc/lisos.png);
+    }
+
+ #d1CP:hover{
+     background-color: rgba(221,160,221,0.7);
+}
+/*--------------------------BOTAO--------BOTAO--------BOTAO----------BOTAO---------BOTAO----------BOTAO--------BOTAO---------*/
+div#centro{
+    width: 200px;
+    margin: 0 auto;
+}
+input#caixalogin[type='text'],[type='password']{
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-bottom-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+}
+input#caixalogin:focus{
+    color: white;
+    outline: 0 none;
+    border-bottom:1.5px;
+    border-style: solid; 
+    border-color: #00C853;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: hsla(0,0%,0%,0);
+}
+input#botao[type='submit']{
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+    color: white;
+    outline: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid #00C853;
+    cursor: pointer;
+}
+input#botao[type='submit']:hover{
+    transition: ease-out 0.3s;
+    background-color: #00C853;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+a#botao{
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    outline: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid #F44336;
+    text-decoration: none;
+    cursor: pointer;
+}
+a#botao:hover{
+    transition: ease-out 0.3s;
+    background-color: #F44336;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+input#enviar[type='submit']{
+    background-color: #00E676;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+    color: white;
+    outline: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+}
+input#enviar[type='submit']:hover{
+    transition: ease-out 0.3s;
+    background-color: #00C853;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+    color: white;
+    outline: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid #1B5E20;
+    text-decoration: none;
+    cursor: pointer;
+}
+a#botaologin{
+    background-color: #42A5F5;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    outline: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+}
+a#botaologin:hover{
+    transition: ease-out 0.3s;
+    background-color: #1565C0;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
