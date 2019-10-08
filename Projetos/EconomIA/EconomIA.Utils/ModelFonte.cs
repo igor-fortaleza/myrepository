@@ -11,5 +11,6 @@ namespace EconomIA.Utils
         public int ID { get; set; }
         public string FonteName { get; set; }
         public string Url { get; set; }
+        public List<string> TypeDado { get; set; }
     }
 }

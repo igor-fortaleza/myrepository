@@ -13,7 +13,7 @@ namespace EconomIA.Program
         static void Main(string[] args)
         {
             ListFontes executa = new ListFontes();
-            executa.GetSite("TREASURY");
+            executa.GetSite("Daily Treasury Yield Curve Rates");
         }
     }
 }

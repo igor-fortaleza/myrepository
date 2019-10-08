@@ -1,0 +1,13 @@
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Find.Data.dll
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Find.Data.pdb
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Utils.dll
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\WebDriver.dll
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\WebDriver.Support.dll
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Utils.pdb
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\WebDriver.xml
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\WebDriver.Support.xml
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Fonte.csprojAssemblyReference.cache
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Fonte.csproj.CoreCompileInputs.cache
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Fonte.csproj.CopyComplete
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.dll
+C:\me\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.pdb

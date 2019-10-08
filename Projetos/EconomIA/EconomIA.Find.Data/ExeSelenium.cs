@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace EconomIA.Find.Data
@@ -12,12 +13,22 @@ namespace EconomIA.Find.Data
     {
        
 
-        public bool GetPage(string url)
+        public static IWebDriver GetPage(string url)
         {
-            ChromeDriver driver = new ChromeDriver();
-            driver.Navigate.url(url);
+           string folderDow = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
-            return true;
+                ChromeOptions options = new ChromeOptions();
+                options.AddUserProfilePreference("download.default_directory", folderDow);
+                options.AddArguments("--disable-infobars");
+                options.AddArguments("disable-infobars");
+                options.AddArgument("no-sandbox");
+                options.AddArguments("start-maximized");
+
+                IWebDriver driver = new ChromeDriver();
+
+                driver.Navigate().GoToUrl(url);
+
+            return driver;            
         }
     }
 }
