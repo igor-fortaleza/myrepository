@@ -1,9 +1,0 @@
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Find.Data.dll
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Find.Data.pdb
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Utils.dll
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\bin\Debug\EconomIA.Utils.pdb
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.csprojAssemblyReference.cache
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.csproj.CoreCompileInputs.cache
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.csproj.CopyComplete
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.dll
-C:\me\codes\myrepository\Projetos\EconomIA\EconomIA.Find.Data\obj\Debug\EconomIA.Find.Data.pdb
