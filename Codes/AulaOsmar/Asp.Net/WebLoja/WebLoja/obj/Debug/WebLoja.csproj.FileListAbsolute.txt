@@ -50,7 +50,6 @@ C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\bin\Newtonsoft.Json.x
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\bin\Antlr3.Runtime.pdb
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\obj\Debug\WebLoja.csprojAssemblyReference.cache
-C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\obj\Debug\WebLoja.csproj.CoreCompileInputs.cache
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\obj\Debug\WebLoja.csproj.CopyComplete
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\obj\Debug\WebLoja.dll
 C:\me\myrepository\Codes\AulaOsmar\Asp.Net\WebLoja\WebLoja\obj\Debug\WebLoja.pdb
