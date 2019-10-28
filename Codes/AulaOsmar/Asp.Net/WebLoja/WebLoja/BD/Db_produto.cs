@@ -59,6 +59,28 @@ namespace WebLoja.BD
 
         }
 
+        public bool UpdateProduto(Produto produto)
+        {
+            int linhasAlteradas = 0;
+
+            SqlConnection connection = new SqlConnection(_conn);
+            SqlCommand command = new SqlCommand("Update Produtos SET Descricao = @DESCRICAO WHERE ID = @ID", connection);
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@ID", produto.ProdutoId);
+            command.Parameters.AddWithValue("@DESCRICAO", produto.Descricao);
+
+            connection.Open();
+            linhasAlteradas = command.ExecuteNonQuery();
+            connection.Close();
+
+            if (linhasAlteradas > 0)
+                return true;
+            else
+            {
+                return false;
+            }  
+        }
+
         public List<Produto> ListProdutos()
         {
             SqlConnection connection = new SqlConnection(_conn);

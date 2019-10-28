@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using WebLoja.BD;
 using WebLoja.Models;
@@ -23,6 +20,21 @@ namespace WebLoja.Controllers
             Produto produto = _db.GetOneProduto(id);
 
             return View(produto);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            Produto produto = _db.GetOneProduto(id);
+
+            return View(produto);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Produto produto)
+        {
+            bool result = _db.UpdateProduto(produto);
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult Create()
